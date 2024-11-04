@@ -1,7 +1,5 @@
-# Get the user's grade input
 grade = int(input("Enter your grade (0-100): "))
 
-# Determine the equivalent conversion, grade, and description
 if 96 <= grade <= 100:
     conversion, letter_grade, description = 4.0, "A", "High Distinction"
 elif 90 <= grade <= 95:
@@ -18,7 +16,6 @@ else:
     print("Invalid grade entered.")
     exit()
 
-# Display the results
 print(f"Conversion: {conversion}")
 print(f"Grade: {letter_grade}")
 print(f"Description: {description}")
