@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Carl Sandayan's Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="profile-photo">
+                <button id="uploadBtn">Upload a Photo</button>
+            </div>
+            <h1>James Carl Sandayan</h1>
+            <p class="position">BSIT, 2nd Year</p>
+            <p class="bio">Aspiring IT professional with a passion for technology and innovation. Here’s a collection of my works and achievements.</p>
+            <button class="view-portfolio-btn">View Portfolio</button>
+        </div>
+    </div>
 
+
+         <input type="file" id="fileInput" accept="image/*" style="display: none;">
+    
+    <script src="script.js"></script>
+</body>
+</html>
