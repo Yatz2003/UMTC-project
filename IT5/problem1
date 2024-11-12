@@ -16,7 +16,5 @@ def identify_network(phone_number):
         return "Network not found."
     else:
         return "Invalid phone number."
-
-# Example usage
 phone_number = input("Enter an 11-digit phone number: ")
 print(identify_network(phone_number))
