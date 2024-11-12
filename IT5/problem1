@@ -1,0 +1,22 @@
+def identify_network(phone_number):
+    if len(phone_number) == 11 and phone_number[:2] == "09":
+        key_digits = phone_number[2:4]
+        network_map = {
+            "Smart": ["13", "14", "20", "21", "28", "29", "30"],
+            "TNT": ["08", "09", "10", "11", "12", "18", "19"],
+            "Sun": ["22", "23", "32", "33"],
+            "Globe": ["15", "16", "17", "25", "26", "27"],
+            "TM": ["03", "04", "05", "06", "07"],
+            "Red": ["01", "02", "24"]
+        }
+
+        for network, digits in network_map.items():
+            if key_digits in digits:
+                return f"The number belongs to the {network} network."
+        return "Network not found."
+    else:
+        return "Invalid phone number."
+
+# Example usage
+phone_number = input("Enter an 11-digit phone number: ")
+print(identify_network(phone_number))
