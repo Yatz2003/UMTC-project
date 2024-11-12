@@ -1,7 +1,7 @@
-def identify_network(phone_number):
-    if len(phone_number) == 11 and phone_number[:2] == "09":
-        key_digits = phone_number[2:4]
-        network_map = {
+def networks(phone_num):
+    if len(phone_num) == 11 and phone_num[:2] == "09":
+        firstfour = phone_num[2:4]
+        ikatulo_ug_upat = {
             "Smart": ["13", "14", "20", "21", "28", "29", "30"],
             "TNT": ["08", "09", "10", "11", "12", "18", "19"],
             "Sun": ["22", "23", "32", "33"],
@@ -10,11 +10,11 @@ def identify_network(phone_number):
             "Red": ["01", "02", "24"]
         }
 
-        for network, digits in network_map.items():
-            if key_digits in digits:
-                return f"The number belongs to the {network} network."
-        return "Network not found."
+        for network, digits in ikatulo_ug_upat.items():
+            if firstfour in digits:
+                return f"This number is {network} network."
+        return "Unknown network."
     else:
         return "Invalid phone number."
-phone_number = input("Enter an 11-digit phone number: ")
-print(identify_network(phone_number))
+phone_num = input("Please Enter an 11-digit phone number: ")
+print(networks(phone_num))
